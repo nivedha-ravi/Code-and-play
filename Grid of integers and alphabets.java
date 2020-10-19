@@ -28,7 +28,6 @@ public class Hello {
 	            if(count%2==0)
 	            {
 	                System.out.print(count+" ");
-	                count++;
 	            }
 	            else
 	            {
@@ -43,9 +42,9 @@ public class Hello {
 	                    {
 	                        System.out.print((char)(no+96)+" ");
 	                    }
-	                    count++;
 	                }
 	            }
+              count++;
 	        }
 	    }
 
