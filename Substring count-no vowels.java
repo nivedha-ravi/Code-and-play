@@ -40,3 +40,61 @@ public class Hello {
         System.out.print(count);
 	}
 }
+
+
+
+
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Your Code Here
+		Scanner scan=new Scanner(System.in);
+		String s=scan.next();
+		int c=0;
+		String p="[^aeiouAEIOU]+";
+		for(int i=0;i<s.length();i++)
+		{
+		    for(int j=i+2;j<=s.length();j++)
+		    {
+		        String t=s.substring(i,j);
+		        if(t.matches(p))
+		        {
+		           // System.out.println(t);
+		        c++;
+		        }
+		    }
+		}
+		System.out.print(c);
+
+	}
+}
+
+
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Your Code Here
+		Scanner sc = new Scanner(System.in);
+		String str = sc.nextLine();
+		char[] ch = str.toCharArray();
+		int count = 0;
+		for(int i=0;i<ch.length-1;i++)
+		{
+		    int j=i;
+		    if(ch[i]!='a' && ch[i]!='e' && ch[i]!='i' && ch[i]!='o' && ch[i]!='u' && ch[i]!='A' && ch[i]!='E' && ch[i]!='I' && ch[i]!='O' && ch[i]!='U')
+		    {
+		      //  int l = 0;
+		        for(j=i+1;j<ch.length;j++)
+		        {
+		            if(ch[j]!='a' && ch[j]!='e' && ch[j]!='i' && ch[j]!='o' && ch[j]!='u' && ch[j]!='A' && ch[j]!='E' && ch[j]!='I' && ch[j]!='O' && ch[j]!='U')
+		                count++;
+		            else
+		                break;
+		        }
+		    }
+		}
+		System.out.println(count);
+	}
+}
