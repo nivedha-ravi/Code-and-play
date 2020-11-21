@@ -44,13 +44,6 @@ public class Hello {
 		int c=in.nextInt();
 		int q=in.nextInt();
 		int a[][]=new int[r][c];
-		for(int i=0;i<r;i++)
-		{
-		    for(int j=0;j<c;j++)
-		    {
-		        a[i][j]=0;
-		    }
-		}
 		for(int i=0;i<q;i++)
 		{
 		    int row=in.nextInt();
