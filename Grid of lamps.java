@@ -80,3 +80,39 @@ public class Hello {
         }
 	}
 }
+
+
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int R=scanner.nextInt();
+		int C=scanner.nextInt();
+		int Q=scanner.nextInt();
+		int[][] arr=new int[R][C];
+		int currRow=0,currCol=0;
+		for(int query=0;query<Q;query++)
+		{
+		    currRow=scanner.nextInt();
+		    currCol=scanner.nextInt();
+		    for(int row=0;row<R;row++)
+		    {
+		        arr[row][currCol-1]^=1;
+		    }
+		    for(int col=0;col<C;col++)
+		    {
+		        arr[currRow-1][col]^=1;
+		    }
+		    arr[currRow-1][currCol-1]=1;
+		}
+		for(int row=0;row<R;row++)
+		{
+		for(int col=0;col<C;col++)
+		{
+		System.out.print(arr[row][col]+" ");
+		}
+		System.out.println();
+    }
+	}
+}
