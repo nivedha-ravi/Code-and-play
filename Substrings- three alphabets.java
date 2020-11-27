@@ -17,26 +17,6 @@ So 7 is printed as the output.
 */
 import java.util.*;
 public class Hello {
-    public static boolean contain(String s)
-    {
-        int f1=0,f2=0,f3=0;
-        for(int i=0;i<s.length();i++)
-        {
-            if(s.charAt(i)=='a')
-            {
-                f1=1;
-            }
-            else if(s.charAt(i)=='b')
-            {
-                f2=1;
-            }
-            else if(s.charAt(i)=='c')
-            {
-                f3=1;
-            }
-        }
-        return (f1==1 && f2==1 && f3==1)?true:false;
-    }
 
     public static void main(String[] args) {
 		Scanner in=new Scanner(System.in);
@@ -46,7 +26,8 @@ public class Hello {
 		{
 		    for(int j=i+3;j<=s.length();j++)
 		    {
-		        if(contain(s.substring(i,j)))
+          String str=s.substring(i,j);
+		        if(str.contains("a") && str.contains("b") && str.contains("c"))
 		        {
 		            count++;
 		        }
