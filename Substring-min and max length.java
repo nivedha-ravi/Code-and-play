@@ -33,7 +33,7 @@ public class Hello {
 		int x=in.nextInt();
 		int m=in.nextInt();
 		int n=in.nextInt();
-		for(int i=0;i<=s.length();i++)
+		for(int i=0;i<s.length();i++)
 		{
 		    for(int k=i;k<=s.length();k++)
 		    {
