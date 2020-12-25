@@ -66,3 +66,38 @@ public class Hello {
 
 	}
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int R=scanner.nextInt();
+		int C=scanner.nextInt();
+		int[] aCount=new int[C];
+		for(int row=0;row<R;row++)
+		{
+		    for(int col=0;col<C;col++)
+		    {
+		        char ch=scanner.next().charAt(0);
+		        if(ch=='A')
+		        aCount[col]++;
+		    }
+		}
+		for(int row=0;row<R;row++)
+		{
+		    for(int col=0;col<C;col++)
+		    {
+		        if(aCount[col]>0)
+		        {
+		        System.out.print("A ");
+		        aCount[col]--;
+		        }
+		        else
+		        {
+		            System.out.print("- ");
+		        }
+		    }
+		    System.out.println();
+		}
+	}
+}
