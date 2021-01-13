@@ -25,6 +25,32 @@ import java.util.*;
 public class Hello {
 
     public static void main(String[] args) {
+	Scanner scanner = new Scanner(System.in);
+	int R=scanner.nextInt(),C=scanner.nextInt();
+	int[][] arr=new int[R][C];
+	for(int row=0;row<R;row++)
+	{
+	    for(int col=0;col<C;col++)
+	    {
+	        arr[row][col]=scanner.nextInt();
+	    }
+	}
+	int M=scanner.nextInt(),N=scanner.nextInt();
+	for(int row=0;row<R*M;row++)
+	{
+	    for(int col=0;col<C*N;col++)
+	    {
+	        System.out.print(arr[row%R][col%C]+" ");
+	    }
+	    System.out.println();
+	}
+	}
+}
+
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
         Scanner in=new Scanner(System.in);
         int r=in.nextInt();
         int c=in.nextInt();
