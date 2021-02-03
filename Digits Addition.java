@@ -34,3 +34,25 @@ public class Hello {
 
 	}
 }
+
+import java.util.*;
+import java.math.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Your Code Here
+		Scanner sc = new Scanner(System.in);
+		int m = sc.nextInt();
+		String str = "";
+		for(int i=0;i<m;i++) str+=sc.nextInt()+"";
+		BigInteger bi1 = new BigInteger(str);
+		int n = sc.nextInt();
+		str="";
+		for(int i=0;i<n;i++) str+=sc.nextInt()+"";
+		BigInteger bi2 = new BigInteger(str);
+		BigInteger bi3;
+		bi3 = bi1.add(bi2);
+		for(char ch:bi3.toString().toCharArray())
+		System.out.print(ch+" ");
+	}
+}
